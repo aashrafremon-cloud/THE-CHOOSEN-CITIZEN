@@ -1,0 +1,6 @@
+{
+  "name": "FIREGUARD AI - ESP32 IoT & Fire Detection Dashboard",
+  "description": "Industrial IoT monitoring and real-time AI fire & smoke detection dashboard for ESP32 and ESP32-CAM sensors.",
+  "requestFramePermissions": ["bluetooth"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

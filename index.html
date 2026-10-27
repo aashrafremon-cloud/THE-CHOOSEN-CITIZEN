@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FIREGUARD AI - ESP32 IoT & Fire Detection Dashboard</title>
+    <meta name="description" content="Industrial IoT monitoring and real-time AI fire & smoke detection dashboard for ESP32 and ESP32-CAM sensors." />
+    <meta property="og:title" content="FIREGUARD AI - ESP32 IoT & Fire Detection Dashboard" />
+    <meta property="og:description" content="Industrial IoT monitoring and real-time AI fire & smoke detection dashboard for ESP32 and ESP32-CAM sensors." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Polyfill/shim window.fetch with getter and setter to prevent Chrome extension TypeError
+      (function() {
+        try {
+          var originalFetch = window.fetch ? window.fetch.bind(window) : null;
+          var currentFetch = originalFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return currentFetch;
+            },
+            set: function(val) {
+              currentFetch = val;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (err) {
+          // Fallback if property is already defined
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#0b0f17] text-zinc-100 antialiased selection:bg-red-500/30 selection:text-red-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
